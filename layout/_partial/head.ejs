@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <%
+    let title = page.title
+    if (is_archive()) {
+        title = '归档'
+        if (is_month()) {
+            title += ': ' + page.year + '/' + page.month
+        } else if (is_year()) {
+            title += ': ' + page.year
+        }
+    } else if (is_category()) {
+        title = '分类: ' + page.category
+    } else if (is_tag()) {
+        title = '标签: ' + page.tag
+    }
+  %>
+  <title><% if (!!title) { %><%= title %> | <% } %><%= config.title %></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="renderer" content="webkit">
+  <%- css('libs/material-design-iconic-font/css/material-design-iconic-font.min') %>
+  <%- css('css/style') %>
+</head>

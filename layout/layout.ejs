@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <%- partial('_partial/head') %>
+  <body>
+    <header class="topbar-wrap">
+      <div class="topbar">
+        <div class="left">
+          <a href="/"><i class="logo"></i></a>
+        </div>
+        <div class="right">
+          <nav class="main-nav">
+            <a class="main-nav-link active" href="/">HOME</a>
+            <a class="main-nav-link" href="/">目录</a>
+            <a class="main-nav-link" href="/">时间轴</a>
+            <a class="main-nav-link" href="/">标签</a>
+            <a class="main-nav-link" href="/">友链</a>
+            <a class="main-nav-link" href="/">关于我</a>
+          </nav>
+          <div class="search-btn"><i class="zmdi zmdi-search"></i></div>
+        </div>
+      </div>
+    </header>
+    <aside class="sidebar-wrap">
+      <div class="sidebar">
+
+      </div>
+    </aside>
+    <main class="main">
+      <%- body %>
+    </main>
+  </body>
+</html>
